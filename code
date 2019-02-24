@@ -9,13 +9,23 @@ def open_file(path):
     for i in lst_with_data:
         append_lst = []
         for j in i:
-            if j.isdigit():
+            if j.isdigit() or j == "-":
                 append_lst.append(j) 
         if len(append_lst) != 0:             
             res_lst.append(append_lst) 
+    res_lst = res_lst[1:]
     res = []          
     for i in res_lst:
         if len(i) != len(res_lst[0]):
             i = i[1:]
-            res.append(i)
-    return res
+            res.append(i) 
+        else:
+            res.append(i)                
+    ln = len(res[0])
+    data_by_years = []
+    for i in range(ln):
+        data_y = []
+        for j in res:
+            data_y.append(j[i])
+        data_by_years.append(data_y)    
+    return data_by_years
