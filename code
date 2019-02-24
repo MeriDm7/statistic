@@ -1,0 +1,21 @@
+def open_file(path):
+    f = open(path, encoding='utf-8', errors='ignore')
+    data = f.readlines()
+    lst_with_data = []
+    for i in data:
+        i = i.replace('"', ' ').replace("\t", ' ').replace("\n", " ").replace("'", ' ').split(' ')
+        lst_with_data.append(i)
+    res_lst = [] 
+    for i in lst_with_data:
+        append_lst = []
+        for j in i:
+            if j.isdigit():
+                append_lst.append(j) 
+        if len(append_lst) != 0:             
+            res_lst.append(append_lst) 
+    res = []          
+    for i in res_lst:
+        if len(i) != len(res_lst[0]):
+            i = i[1:]
+            res.append(i)
+    return res
