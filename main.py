@@ -10,7 +10,7 @@ def main():
     start = "This program allows you to get a line graph of dependecnce between mortality for various reasons and the release of pollutants into the air in all regions of Ukraine(or in general in Ukraine) from 2005 to 2017.\n"
     print(start)
     choosing = "Do you want to get the information about the whole country(1) or one certain region(2)?\nENTER 1 OR 2. "
-    print(choosing)  
+    print(choosing) 
     choice = input() 
     pollution = new_lst 
     dead = lst_with_res  
@@ -63,9 +63,10 @@ def main():
     plt.plot(x_poll, y1_death, color='black')
     plt.plot(x_poll, y2_cancer, color='orange')
     plt.plot(x_poll, y3_heart, color='red')
+    plt.legend(('Total', 'Cancer', 'Heart disease'), loc='upper right')
     plt.xlabel('Pollution')
     plt.ylabel('Percent of death')
-    plt.title('Line')
+    plt.title('Dependency line')
     plt.show()                             
 
 
