@@ -7,8 +7,8 @@ Shows you a graph of dependence between mortality and pollution in the selected 
 # To start
 1) Clone this repository.
 2) Run main.py.
-3)Choose graph about which region you want to see.
-4)Analyse!
+3) Choose graph about which region you want to see.
+4) Analyse!
 
 # Files
 - main.py - main file
@@ -18,3 +18,4 @@ Shows you a graph of dependence between mortality and pollution in the selected 
 - POLLUTION.py - creating a list with dicts which contains information about pollution and calculating average number of pollution.
 - reading_file_......py - reading files about population.
 - pollution_.....py - reading files about pollution.
+- .....csv - files with statistics information.
